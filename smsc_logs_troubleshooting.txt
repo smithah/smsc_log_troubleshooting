@@ -1,1 +1,29 @@
+Troubleshooting and Limitations
+This section describes troubleshooting and limitations for Application
+Management for SAP.
+
+The SAP KPI Status Remains Not Up to Date
+
+If the SAP KPI status remains Not up to date  check the following
+solutions in the order listed below:
+
+1.Synchronize SiteScope and BSM. In SiteScope, select Integration
+Preferences > BSM Integration Preferences Dialog Box > BSM Preferences
+Available Operations. For details, see BSM Integration Preferences
+Dialog Box in Using SiteScope in the SiteScope Help.
+1.Check the following file to ensure that the samples arrive to the
+Business Logic Engine:
+<HPBSM root directory on the Gateway Server>
+\log\marble_matcher\MarbleMatcher.log
+1.Check that the samples arrive to the bus in the following file:
+<HPBSM root directory on the Gateway Server> \log\wde\wdePublishedSamples.log
+1.Check that the samples are sent in the following file:
+<SiteScope root directory>\logs\topaz_all.log.1
+1.If you see KPIs with the Not up to date status, check the threshold
+definition in System Availability Management.
+
+1.If you see KPIs with the Not up to date status, check the threshold
+definition in System Availability Management.
+1.Restart SiteScope, detach it, and re-attach it.
+1.Check time synchronization between BSM and its management database.
 
